@@ -1,0 +1,61 @@
+<div class="container">
+  <h1>{{isEditMode ? 'Edit' : 'Create'}} Customer</h1>
+
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="name" placeholder="Enter name">
+      <mat-error *ngIf="customerForm.get('name')?.hasError('required')">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="email" placeholder="Enter email">
+      <mat-error *ngIf="customerForm.get('email')?.hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="customerForm.get('email')?.hasError('email')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="phone" placeholder="Enter phone">
+      <mat-error *ngIf="customerForm.get('phone')?.hasError('required')">
+        Phone is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="website" placeholder="Enter website">
+    </mat-form-field>
+
+    <div formGroupName="company" class="company-section">
+      <h3>Company Information</h3>
+      
+      <mat-form-field appearance="outline">
+        
+        <input matInput formControlName="name" placeholder="Enter company name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        
+        <input matInput formControlName="catchPhrase" placeholder="Enter catch phrase">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+      
+        <input matInput formControlName="bs" placeholder="Enter BS">
+      </mat-form-field>
+    </div>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!customerForm.valid">
+        {{isEditMode ? 'Update' : 'Create'}} Customer
+      </button>
+      <button class="btn" mat-button type="button" routerLink="/customers">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

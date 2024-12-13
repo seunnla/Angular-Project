@@ -1,0 +1,67 @@
+.container {
+  padding: 20px;
+}
+
+.filter-field {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  margin-bottom: 20px;
+  /* background-color: #6200ff; */
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-row:hover {
+  background-color: #fff3e0;
+}
+
+.mat-column-actions {
+  width: 120px;
+  text-align: center;
+}
+
+.mat-mdc-raised-button {
+  margin-right: 8px;
+}
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between the search field and button */
+  gap: 20px; /* Add spacing between elements */
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
+  margin-bottom: 20px;
+}
+
+.custom-filter-field {
+  flex: 1;
+  max-width: 500px;
+}
+
+.custom-filter-field mat-form-field {
+  width: 100%;
+}
+
+.custom-filter-field input {
+  padding-right: 30px; /* Space for suffix icon */
+}
+
+.custom-add-button {
+  display: flex;
+  align-items: center;
+  /* background-color: #ff6b00; */
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+input {
+  padding: 20px 40px;
+}
